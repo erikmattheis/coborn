@@ -11,7 +11,6 @@ var git =        require('gulp-git');
 var runSeq =     require('run-sequence');
 var fs =         require('fs');
 var exec =       require('child_process').exec;
-                 require('gulp-grunt')(gulp);
 
 var config = {
   chains: ['silver', 'common'],
@@ -98,39 +97,40 @@ gulp.task('default', function(cb) {
 });
 
 gulp.task('build-core', function() {
-  return gulp.src(["src/gsn.js",
-    "src/module.js",
-    "src/directives/ctrlBody.js",
-    "src/directives/ctrlHome.js",
-    "src/directives/facebook.js",
-    "src/directives/gsnCarousel.js",
-    "src/directives/gsnFeatured.js",
-    "src/directives/gsnModal.js",
-    "src/directives/gsnPartial.js",
-    "src/directives/gsnPathPixel.js",
-    "src/directives/gsnShoppingList.js",
-    "src/directives/gsnSpinner.js",
-    "src/directives/gsnSticky.js",
-    "src/directives/gsnStoreInfo.js",
-    "src/directives/ngWatchHead.js",
-    "src/directives/ngGiveHead.js",
-    "src/directives/placeholder.js",
-    "src/filters/pagingFilter.js",
-    "src/filters/range.js",
-    "src/filters/removeAspx.js",
-    "src/filters/trustedHtml.js",
-    "src/services/gsnAdvertising.js",
-    "src/services/gsnDfp.js",
-    "src/services/gsnGlobal.js",
-    "src/services/gsnList.js",
-    "src/services/gsnMiscServices.js",
-    "src/services/gsnPrinter.js",
-    "src/services/gsnProfile.js",
-    "src/services/gsnStorage.js",
-    "src/services/gsnStore.js",
-    "src/services/gsnYoutech.js"])
+  return gulp.src(["./src/gsn.js",
+    "./src/module.js",
+    "./src/directives/ctrlBody.js",
+    "./src/directives/ctrlHome.js",
+    "./src/directives/facebook.js",
+    "./src/directives/gsnCarousel.js",
+    "./src/directives/gsnFeatured.js",
+    "./src/directives/gsnModal.js",
+    "./src/directives/gsnPartial.js",
+    "./src/directives/gsnPathPixel.js",
+    "./src/directives/gsnShoppingList.js",
+    "./src/directives/gsnSpinner.js",
+    "./src/directives/gsnSticky.js",
+    "./src/directives/gsnStoreInfo.js",
+    "./src/directives/gsnWatchHead.js",
+    "./src/directives/ngGiveHead.js",
+    "./src/directives/placeholder.js",
+    "./src/filters/pagingFilter.js",
+    "./src/filters/range.js",
+    "./src/filters/removeAspx.js",
+    "./src/filters/trustedHtml.js",
+    "./src/services/gsnAdvertising.js",
+    "./src/services/gsnDfp.js",
+    "./src/services/gsnGlobal.js",
+    "./src/services/gsnList.js",
+    "./src/services/gsnMiscServices.js",
+    "./src/services/gsnPrinter.js",
+    "./src/services/gsnProfile.js",
+    "./src/services/gsnStorage.js",
+    "./src/services/gsnStore.js",
+    "./src/services/gsnYoutech.js",
+    "./src/services/gsnYoutech.js"])
   .pipe(concat('gsncore.refactor.js'))
-  .pipe(gulp.dest('src/'));
+  .pipe(gulp.dest('./src/'));
 });
 
 gulp.task('watch', function() {
