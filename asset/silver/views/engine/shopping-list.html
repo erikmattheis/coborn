@@ -56,8 +56,6 @@
                               <div data-ng-hide="item.IsCoupon" class="price">{{item.PriceString}}</div>
                               <div data-ng-show="item.ItemTypeId == 13">Redeemable one time only.</div>
 															<input style="height: 20px;" placeholder="Comment" data-ng-hide="item.IsCoupon" data-ng-model="item.Comment" ui-keypress="{13:'doUpdateQuantity(item)'}" />
-                              <!-- may need this data from stored procedure
-                              <div class="savings" data-ng-show="item.SavingsString">SAVINGS - {{item.SavingsString}}</div>-->
                           </div>
                           <div class="col-md-4 col-xs-4">
                               <input class="btn btn-xs quantity" style="width: 35px" data-ng-show="!item.IsCoupon" name="quantity" data-ng-model="item.NewQuantity" />

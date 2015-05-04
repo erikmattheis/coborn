@@ -2,7 +2,7 @@
   <form role="form" name="myForm" data-ng-submit="registerProfile()" data-ng-hide="isLoggedIn">
     <div class="form-group">
       <label for="firstname">
-        First Name: <span class="required" data-ng-show="myForm.firstname.$invalid">Required</span>
+        First Name test: <span class="required" data-ng-show="myForm.firstname.$invalid">Required</span>
       </label>
       <input type="text" class="form-control" name="firstname" placeholder="Enter first name" data-ng-model="profile.FirstName" data-ng-required="true" /><span data-ng-show="myForm.firstname.$valid"><img alt="OK" class="validCheck" data-ng-src="{{getThemeUrl('/images/pReg_valid.png')}}" /></span>
     </div>

@@ -112,6 +112,7 @@ gulp.task('build-core', function() {
     "src/directives/gsnSpinner.js",
     "src/directives/gsnSticky.js",
     "src/directives/gsnStoreInfo.js",
+    "src/directives/ngWatchHead.js",
     "src/directives/ngGiveHead.js",
     "src/directives/placeholder.js",
     "src/filters/pagingFilter.js",
@@ -130,6 +131,10 @@ gulp.task('build-core', function() {
     "src/services/gsnYoutech.js"])
   .pipe(concat('gsncore.refactor.js'))
   .pipe(gulp.dest('src/'));
+});
+
+gulp.task('watch', function() {
+    gulp.watch('src/**/*.js', ['build-core']);
 });
 
 var ngGraph = require('gulp-angular-architecture-graph');

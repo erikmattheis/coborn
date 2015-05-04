@@ -35,7 +35,6 @@
     "grunt": "~0.4.5",
     "grunt-contrib-jasmine": "~0.8.2",
     "gulp": "~3.8.10",
-    "gulp-angular-architecture-graph": "0.0.3",
     "gulp-coffee": "*",
     "gulp-concat": "~2.3.4",
     "gulp-git": "~1.1.0",
@@ -49,7 +48,14 @@
     "jshint-stylish": "^1.0.0",
     "method-override": "*",
     "request": "*",
-    "run-sequence": "~1.0.2"
+    "run-sequence": "~1.0.2",
+    "grunt-contrib-clean": "*",
+    "grunt-contrib-jshint": "*",
+    "grunt-contrib-concat": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-compress": "*",
+    "grunt-karma": "*"
+
   },
   "engines": {
     "node": ">= 0.9.0"
