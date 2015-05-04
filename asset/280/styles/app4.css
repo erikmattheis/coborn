@@ -1,32 +1,24 @@
-/* angular directives */
-
-[ng-click],
-[data-ng-click],
-[x-ng-click] {
-    cursor: pointer;
-}
-
 /*---------- Chain CSS ----------*/
-body 
+html, body, .layout-container 
 {
-  background-color: #f3eddd;
-  color: #600;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+  background-color: #9d9d9d;
+  color: #000000;
+  font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
 }
 
 h1, h2, h3, h4, h5 
 {
-  color: #300;
+  color: #000000;
 }
 
 a 
 {
-  color: #8f000c;
+  color: #0c00f7;
 }
 
 a:hover, a:focus
 {
-  color:#7f000c;
+  color:#333333;
 }
 
 input
@@ -34,9 +26,9 @@ input
   color: #000000;
 }
 
-p 
-{
-  color: #600;
+
+p {
+  color: #000000;
   margin: 0;
 }
 
@@ -57,10 +49,14 @@ ul
   height: 0;
 }
 
-.header.container.container-full,
-.footer.container.container-full
+.header.container.container-full
 {
   width: auto;
+}
+
+.noPad
+{
+  padding: 0;
 }
 
 .noPadWidth
@@ -79,31 +75,35 @@ ul
   padding-right: 0;
 }
 
-.btnSilver
+.btnSilver, .btn-defaultSilver 
 {
-  background: url(http://coborns.gsngrocers.com/images/hmpg_navlink.jpg) repeat-x top left !important;
-  color: #fff !important;
-  border-left-width: 1px;
-  border-left-style: solid;
-  border-left-color: #bcb392;
-  height: 34px !important;
-}
-
-.btn-defaultSilver {
-
+  background-color: #676767;
+  border-color: #000000;
+  color: #ffffff;
 }
 
 .btnSilver:hover
 {
-  background-color: #f3eddd;
-  color: #ffffff;
+  background-color: #676767;
+  color: #000000;
 }
 
 .btn-defaultSilver:hover, .btn-defaultSilver:focus, 
 .btn-defaultSilver:active, .btn-defaultSilver.active, 
 .open .dropdown-toggle.btn-defaultSilver
 {
-  /*background-color: #f3eddd;*/
+  background-color: #676767;
+}
+
+.btn-default:hover, .btn-default:focus, .btn-default:active, 
+.btn-default.active, .open .dropdown-toggle.btn-default
+{
+  background-color: #676767;
+}
+
+.btn-success
+{
+  background-color: #0085ca;
 }
 
 .glyphicon
@@ -116,57 +116,72 @@ label
   font-weight: normal;
 }
 
+.container .mainNavigation
+{
+  padding: 0;
+}
+
 /*---------- Header ----------*/
-.signInBar
+.headerBar
 {
-  background-color: #f3eddd;
-  padding: 5px 0;
+  background-color: #767676;
+  padding: 5px;
 }
 
-.siteStatus li:first-child
+.account li
 {
-  padding-right: 5px;
+  display: inline;
+  margin: 0 2px;
 }
 
-.btnMyAccount
+.status p
 {
-  margin-right: 5px;
+  padding: 5px;
+}
+
+.status li:first-child
+{
+  margin-right: 6px;
 }
 
 .navbar-toggleAccount
 {
-  margin: -34px 0;
+  border-color: 1px solid #000000;
+  margin-top: -34px;
   padding: 6px 10px;
 }
 
-.navAccount > li
+.logoBar
 {
-  display: inline-flex;
-}
-
-.navbar-navAccount
-{
-  margin: 0 -15px;
+  background-color: #d3d3d3;
 }
 
 .logo
 {
-  float: left;
+  padding-bottom: 40px;
 }
 
-.storeBranding
+.socialMedia li
 {
-  color: #600;
-  background: url(/asset/75/images/header-bg-gradient.png) repeat-x top right;
+  float: left;
+  margin-top: 20px;
+  padding: 0 5px;
+}
+
+.socialMedia img
+{
+  height: 32px;
+  width: 32px;
 }
 
 /*---------- Shopping List Plug In ----------*/
 .dropdown-menuList 
 {
-  background-color: #f3eddd;
+  background-color: #ffffff;
   border: 6px solid #000000;
   width: 300px;
   padding: 0;
+  /*text-align: center;*/
 }
 
 .dropdown-menuList.active 
@@ -182,13 +197,13 @@ label
 }
 
 .input-group-addonSilver
-  {
-width: 50px;
+{
+  width: 50px;
 }
 
 .shoppingListHeader
 {
-  background-color: #8f000b;
+  background-color: #676767;
 }
 
 .shoppingListHeader h4
@@ -202,7 +217,7 @@ width: 50px;
 .listOptions li
 {
   float: left;
-  margin: 5px 11px;
+  margin: 5px 9px;
 }
 
 .listOptions i
@@ -213,13 +228,13 @@ width: 50px;
 
 .listOptions span
 {
-  color: #600;
+  color: #000000;
   text-align: center;
 }
 
 .listCount p
 {
-  color: #8f000c;
+  color: #000000;
   margin-bottom: 10px;
 }
 
@@ -279,201 +294,112 @@ width: 50px;
   text-align: center;
 }
 
-.btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle) 
-{
+.btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle) {
   border-bottom-right-radius: 4px;
   border-top-right-radius: 4px;
 }
 
-.btn-groupList
+.btnShoppingList
 {
-  margin-top: 60px;
+  margin-top: 2px;
 }
 
 /*---------- Main Navigation ----------*/
-.navSilver li ul li
-{
-  margin-top: 0;
-}
-
-.navLeft, .navRight
-{
-  float: left;
-  margin-top: 20px;
-}
-
-.faSilver
-{
-  margin-top: 3px;
-}
-
-.navSilver > li
-{
-  float: left;
-}
-
-.navSilver >li > a
-{
-  color: #000000;
-  padding: 10px 15px;
-}
-
-.navSilver > li > a:hover, .navSilver > li > a:focus,
-.navSilver .open > a, .navSilver .open > a:hover, .navSilver .open > a:focus
-{
-  background-color: transparent;
-  color: #000000;
-}
-
-.dropdown-menuSilver
+.navbar-defaultSilver
 {
   background-color: transparent;
   border: none;
-  box-shadow: none;
 }
 
-.dropdown-menuSilver li
-{
-  background-color: #8f000b;
-  margin-bottom: 5px;
-}
-
-.dropdown-menuSilver li:last-child
+.navbarSilver
 {
   margin-bottom: 0;
 }
 
-.dropdown-menuSilver > li > a
+.navbar-navSilver > li
 {
-  color: #ffffff;
-  padding: 8px 20px;
-  text-align: center;
+  background-color: #767676;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  box-shadow: inset -2px 2px 3px #000000;
 }
 
-.dropdown-menuSilver > li > a:hover, .dropdown-menuSilver > li > a:focus
+.navbar-defaultSilver .navbar-navSilver > li > a
 {
-  background-color: #7f000c;
   color: #ffffff;
+}
+
+.navbar-defaultSilver .navbar-navSilver > .active > a, 
+.navbar-defaultSilver .navbar-navSilver > .active > a:hover, 
+.navbar-defaultSilver .navbar-navSilver > .active > a:focus
+{
+  background-color: #9d9d9d;
+  box-shadow: inset -2px 2px 3px #000000;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.navbar-default .navbar-nav > li > a:hover, 
+.navbar-default .navbar-nav > li > a:focus
+{
+  background-color: #9d9d9d;
+  box-shadow: inset -2px 2px 3px #000000;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
 }
 
 /*---------- Home ----------*/
-
-.mainContent
-{
-  padding-top: 30px;
-}
-
-.homeContent
+.featuredContent
 {
   background-color: #ffffff;
+  border: 5px solid #000000;
+  border-radius: 5px;
+  margin-top: 20px;
 }
 
-.homeContent h1
+.featured
 {
-  border-bottom: 1px solid #000000;
-  margin: 0 10px;
+  background-color: #e3e3e3;
+  border: 3px solid #767676;
+  border-radius: 5px;
+  height: 215px;
+  margin-top: 20px;
   padding: 10px;
   text-align: center;
 }
 
-.promoColumn p
+.featured h3
 {
-  color: #000000;
+  margin-top: 0;
 }
 
-.promoColumn img
+.featured img
 {
-  float: left;
-  padding: 15px 15px 8px;
+  display: block;
+  margin: 0 auto;
 }
 
-.promoBlock
+.homeCirc
 {
-  width: 100%;
+  height: 145px;
+  width: 115px;
 }
 
-.one
+.recipeHome img, .articleHome img
 {
-  padding-right: 10px;
-}
-
-.two
-{
-  padding: 0 10px;
-}
-
-.three
-{
-  padding-left: 10px;
-}
-
-.featuredBlock img
-{
-  float: left;
-  height: 110px;
-  margin: 10px;
-  width: 100px;
-}
-
-.featuredContent 
-{
-  background: none repeat scroll 0 0 #7F0F18;
-}
-
-.featuredContent h3
-{
-  color: #fff;
-  margin: 10px 0;
-  padding: 10px 0 0;
-  text-align: center;
-}
-
-.featuredContent p
-{
-  color: #fff;
-  padding-bottom: 74px;
-  text-align: center;
-}
-
-.btn-link
-{
-  background: none repeat scroll 0 0 #7F0F18;
-  border-radius: 50%;
-  color: #fff;
-  height: 79px;
-  line-height: 79px;
-  margin-top: -48px;
-  margin-left: 220px;
-  padding: 0;
-  text-align: center;
-  width: 79px;
-}
-
-.btn-link:hover 
-{
-  background: none repeat scroll 0 0 #8f000c;
-  border-radius: 50%;
-  color: #fff;
-  height: 79px;
-  line-height: 79px;
-  margin-top: -48px;
-  margin-left: 220px;
-  padding: 0;
-  text-align: center;
-  width: 79px;
+  height: 125px;
+  width: 150px;
 }
 
 /*---------- SlideShow ----------*/
-.slide-container 
-{
+.slide-container {
   position: relative;
   overflow: hidden;
   width: 100%;
-  height: auto;
+  height: 475px;
 }
 
-.slide.ng-enter, .slide.ng-leave 
-{
+.slide.ng-enter, .slide.ng-leave {
   -webkit-transition: left 0.6s ease-in-out 0s;
   -moz-transition: left 0.6s ease-in-out 0s;
   -o-transition: left 0.6s ease-in-out 0s;
@@ -483,51 +409,68 @@ width: 50px;
   width: 100%;
 }
 
-.slide.ng-enter 
-{
-  left: 100%;
+.slide.ng-enter {
+    left: 100%;
 }
 
 
-.slide.ng-enter.ng-enter-active 
-{   
+.slide.ng-enter.ng-enter-active {   
   left: 0;
 }
 
-.slide.ng-leave 
-{
+.slide.ng-leave {
   position: absolute;
   left: 0;
 }
 
-.slide.ng-leave.ng-leave-active 
-{
+.slide.ng-leave.ng-leave-active {
   left: -100%;
 }
 
-
-.carousel-indicators li 
+.carousel-indicators
 {
+  position: absolute;
+  top: 10px;
+  left: 10%;
+}
+
+.carousel-indicators li {
   background-color: #999;
   background-color: rgba(70,70,70,.25);
 }
 
-.carousel-indicators .active 
-{
+.carousel-indicators .active {
   background-color: #444;
 }
 
-.carousel-buttons 
-{
+.carousel-buttons {
   bottom: 11px;  
   right: 0px;
   position: absolute;
   z-index: 15;
 }
 
-.controls 
-{
+.controls {
   bottom: -8px;
+}
+
+.slide-overlay
+{
+  background-color: rgba(198, 198, 198, 0.5);
+  height: 475px;
+  position: absolute;
+  text-align: center;
+  top: 0;
+}
+
+.slide-overlay h3
+{
+  margin-top: 150px;
+}
+
+.slide-overlay a
+{
+  margin-top: 25px;
 }
 
 /*---------- Footer ----------*/
@@ -536,26 +479,44 @@ width: 50px;
   text-align: center;
 }
 
+.footerBar a
+{
+  color: #ffffff;
+}
+
+.locatorFooter button
+{
+  float: left;
+  margin-top: 20px;
+}
+
+.yourStore
+{
+  clear: left;
+  text-align: left;
+}
+
 .footerBar h3
 {
+  color: #ffffff;
   text-align: center;
-  padding-bottom: 20px;
 }
 
-.social h4
+.companyInfo ul
 {
-  margin-top: 0;
+  float: right;
+  margin-top: 20px;
 }
 
-.social ul
+.companyInfo li
 {
-  margin-left: 8px;
+  display: inline;
+  padding-right: 10px;
 }
 
-.social li
+.companyInfo li:last-child
 {
-  display: inline-block;
-  padding: 0 2px;
+  padding-right: 0;
 }
 
 .container-footer
@@ -623,8 +584,7 @@ address
 
 .modalInfoBox
 {
-  /*Put your client custom color here!*/
-  /*background-color: rgb(186,167,137);*/
+  background-color: rgb(186,167,137);
   color: #000000;
 }
 
@@ -636,14 +596,14 @@ address
 /*---------- Single Store Info ----------*/
 .singleStoreInfo 
 {
-  color: #600;
+  color: #000000;
   height: 250px;
   margin-bottom: 20px;
 }
 
 .singleStoreInfo h5 
 {
-  color: #000000;
+  color: #0085ca;
 }
 
 .allStores 
@@ -664,10 +624,10 @@ address
 
 .dcircular-list-single
 {
-  border: 1px solid #ffffff;    
-  margin: 10px;
-  min-height: 280px;
-  width: 45%;
+    border: 1px solid #ffffff;    
+    margin: 10px;
+    min-height: 280px;
+    width: 45%;
 }
 
 .thumbnail
@@ -680,7 +640,7 @@ address
 
 .thumbnail.dcircular-thumbnail
 {
-  border: none;
+    border: none;
 }
 
 .thumbnail > img, .thumbnail a > img
@@ -691,7 +651,7 @@ address
 
 .caption h3
 {
-  color: #600;
+  color: #ffffff;
   font-size: 20px;
   margin: 0;
 }
@@ -715,7 +675,7 @@ address
 
 .pagination > li > a, .pagination > li > span 
 {
-  background-color: #8f000b;
+  background-color: #767676;
   color: #ffffff;
 }
 
@@ -724,9 +684,9 @@ address
 .pagination > .active > span:hover, .pagination > .active > a:focus,
 .pagination > .active > span:focus 
 {
-  background-color: #ffffff;
-  border-color: #000000;
-  color: #000000;
+  background-color: white;
+  border-color: black;
+  color: black;
 }
 
 .pagination > li > a:hover, .pagination > li > span:hover,
@@ -757,17 +717,17 @@ address
 
 .searchField a 
 {
-  padding: 0 5px;
+    padding: 0 5px;
 }
 
 .searchField input
 {
-  background: url('../images/search.png') no-repeat scroll 25px 10px;
-  background-color: #ffffff;
-  padding-right: 0;
-  border: none;
-  border: 1px solid #7D6D6A \9; /* IE8 and below only */
-  box-shadow: 0px 0px 4px #999;
+    background: url('../images/search.png') no-repeat scroll 25px 10px;
+    background-color: #ffffff;
+    padding-right: 0;
+    border: none;
+    border: 1px solid #7D6D6A \9; /* IE8 and below only */
+    box-shadow: 0px 0px 4px #999;
 }
 
 .list
@@ -782,7 +742,7 @@ address
 
 .list img
 {
-  border: 1px solid #ffffff;
+  border: 1px solid #000000;
   border-radius: 4px;
   height: 50px;
   margin-bottom: 5px;
@@ -819,7 +779,7 @@ caption
 /*---------- Available Varieties ----------*/
 .availableVarieties 
 {
-  background-color: #f3eddd;
+  background-color: #ffffff;
   border: 1px solid #000000;
   border-top: none;
   border-radius: 3px;
@@ -832,7 +792,7 @@ caption
 
 .varietiesHeader 
 {
-  background-color: #8f000b;
+  background-color: #d3d3d3;
   border-top: 1px solid #000000;
   margin: -5px -5px 5px;
   padding: 0 0 1px;
@@ -840,7 +800,7 @@ caption
 
 .varietiesHeader h4 
 {
-  color: #ffffff;
+  color: #000000;
   font-size: 12px;
   text-align: center;
 }
@@ -888,8 +848,7 @@ caption
   color: #009b68;
 }
 
-.recipeSearch a 
-{
+.recipeSearch a {
   padding: 5px;
 }
 
@@ -897,14 +856,8 @@ caption
 .singleCoupon
 {
   border: 1px dashed black;
-<<<<<<< HEAD
-  min-height: 300px;
-  margin: 5px;
-  padding:7px;
-=======
   height: 300px;
   margin: 5px;
->>>>>>> 7e528d8e2e0c2cef2b826748567fd93a508b0d85
 }
 
 .singleCoupon h4, .singleCoupon h5
@@ -918,9 +871,8 @@ caption
 {
   display: block;
   margin: 6px auto;
-
-  max-height: 87px;
-  max-width: 87px;
+  height: 87px;
+  width: 87px;
 }
 
 .description p
@@ -940,11 +892,6 @@ caption
   margin: 0 auto;
 }
 
-.inStoreCoupon p
-{
-  padding: 0;
-}
-
 /*----- Recipe Center -----*/
 .recipeContent
 {
@@ -958,7 +905,12 @@ caption
 
 .recipeSearch, .advancedSearch, .top50Recipe
 {
-  background-color: #f3eddd;
+  background-color: #ffffff;
+}
+
+.recipeCenter, .recipeContent, .myRecipeContent
+{
+  background-color: rgba(186,167,137,.85);
 }
 
 .course, .prepTime, .skill
@@ -990,19 +942,21 @@ caption
 
 .recipeArticle h3
 {
-  margin: 2px 0 10px;
+  border-top: 15px solid #767676;
+  margin: -18px 0 10px;
   text-align: center;
 }
 
 .rOTD img
 {
-  margin: 10px 74px;
+  display: block;
+  margin: 10px auto;
   max-height: 150px;
 }
 
 .rOTDTitle
 {
-  background-color: #8f000b;
+  background-color: #767676;
   color: #ffffff;
   padding: 10px 0;
 }
@@ -1025,16 +979,10 @@ caption
 
 .recipeMenu button
 {
-  background-color: #8f000b;
+  background-color: #767676;
   border-radius: 0;
   color: #ffffff;
   margin-bottom: 10px;
-}
-
-.recipeMenu button:hover
-{
-  background-color: #7F0F18;
-  color: white;
 }
 
 .tips
@@ -1044,7 +992,7 @@ caption
 
 .quickSearch h3, .advanced h3, .advanced a
 {
-  color: white;
+  color:white;
 }
 
 .quickSearch li a, .topFifty a
@@ -1054,7 +1002,7 @@ caption
 
 .myRecipeInfo h2, .myRecipeInfo h3, .myRecipeInfo h4, .myRecipeInfo h5
 {
-  color: white;
+  color:white;
 }
 
 .advanced select, .advanced option
@@ -1102,11 +1050,6 @@ caption
   text-align: center;
 }
 
-.ingredients li, .preparation li
-{
-  color: #000000;
-}
-
 .ingredients li input 
 {
   margin: 0 3px;
@@ -1131,7 +1074,6 @@ caption
 
 .nutr-table th, .nutr-table td 
 {
-  color: #000000;
   font-size: 8pt;
   font-weight: bold;
   font-family: Franklin Gothic Medium;
@@ -1201,7 +1143,6 @@ a.list-group-item.active, a.list-group-item.active:hover, a.list-group-item.acti
 /*------Manage Shopping List ------*/
 .manageOptions i
 {
-  color: #000000;
   display: block;
 }
 
@@ -1223,7 +1164,7 @@ a.list-group-item.active, a.list-group-item.active:hover, a.list-group-item.acti
 
 .manageItem
 {
-  border: 1px solid #ffffff;
+  border: 1px solid #000000;
   border-radius: 4px;
   height: 50px;
   margin-bottom: 5px;
@@ -1235,18 +1176,18 @@ a.list-group-item.active, a.list-group-item.active:hover, a.list-group-item.acti
 /*---------- Print Shopping List ----------*/
 .printHeader
 {
-  border-bottom: 3px solid #000000;
-  margin-bottom: 10px;
+    border-bottom: 3px solid #000000;
+    margin-bottom: 10px;
 }
 
 .printListInfo
 {
-  text-align: center;
+    text-align: center;
 }
 
 .printHeader, .printBody, .printFooter
 {
-  background-color: #e3e3e3;
+  background-color: #ffffff;
 }
 
 .printFooter, .printBody h4
@@ -1279,7 +1220,7 @@ textarea
 
 .Employment-Description
 {
-  margin: 10px 0px -10px;
+   margin: 10px 0px -10px;
 }
 
 .Employment-Jobs a
@@ -1359,22 +1300,8 @@ textarea
   border-top-style:none;
 }
 
-.signInBox label
-{
-  color: #000000;
-}
-
 /*---------- Static Content ----------*/
-.staticContent
-{
-  margin: 10px;
-}
 
-.staticContent li
-{
-  color: #000000;
-  margin-left: 5px;
-}
 
 .staticTabs
 {
@@ -1384,7 +1311,7 @@ textarea
 .staticContent h1, .staticContent h2, .staticContent h3,
 .staticContent h4, .staticContent h5
 {
-  color: #000000;
+  color: #0085ca;
 }
 
 .staticHeader
@@ -1417,24 +1344,20 @@ textarea
 .staticBlock img
 {
   float: left;
-  margin-right: 16px;
-  margin-bottom: -4px;
-}
-
-.staticDescription p
-{
+  margin-right: 6px;
   margin-bottom: 20px;
 }
 
 /*---------- Registration/Profile ----------*/
 .required, .has-error .form-control-feedback
 {
-  color: #fb0023;
+    color: #fa0600;
+    font-weight: bolder;
 }
 
 .has-error .form-control
 {
-  border-color: #0085ca;
+  border-color: #fa0600;
 }
 
 .has-error .help-block, 
@@ -1458,6 +1381,11 @@ textarea
 }
 
 /*------- Registration / Loyalty Card Page -----------*/
+.registration
+{
+  padding: 20px 0;
+}
+
 .recaptcha_only_if_privacy a
 {
   color: white;
@@ -1467,6 +1395,7 @@ textarea
 {
   color: black;
 }
+
 
 .McmRegistrationTopMargin
 {
@@ -1526,15 +1455,15 @@ textarea
 
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus
 {
-  background-color: #444444;
+  background-color: #767676;
   color:#ffffff;
   font-weight:bold;
 }
 
 .nav-tabs > li > a:hover 
 {
-  border-color: #eee #eee #ddd;
-  background-color: #444444;
+    border-color: #eee #eee #ddd;
+    background-color: #676767;
 }
 
 .nav-tabs
@@ -1545,83 +1474,95 @@ textarea
 
 .nav-tabs > li > a
 {
-  color: #FFFFFF;
+   color: #FFFFFF;
 }
 
 .nav-tabs > li > a 
 {
-  background-color: #8f000b;
+  background-color: #d3d3d3;
   border: 1px solid rgba(0, 0, 0, 0);
   border-radius: 4px 4px 0 0;
   line-height: 1.42857;
   margin-right: 2px;
-  color:white;
+  color: #000000;
 }
 
 /*---------- Media Queries ----------*/
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   /*------ Header & Nav ------*/
-  .navbar-nav {
-    margin: 0;
+  .navbar-toggleAccount {
+    margin-right: -15px;
   }
 
-  .navLeft {
-    margin-top: 0;
-  }
-
-  .navRight {
-    float: left;
-    clear: left;
-    margin-top: 0;
+  .btnLocations {
+    margin-left: -15px;
   }
 
   .btn-groupMenu {
-    margin-left: 15px;
+    margin-top: -18px;
+    margin-left: 5px;
   }
 
-  .navSilver > li {
-    clear: left;
-  }
-
-  .navbar-rightSL {
-    float: right;
+    .btn-groupList
+  {
+    margin-left: -12px;
+    margin-top: -1px;
   }
 
   .dropdown-menuList {
-    margin-left: -188px;
+    left: -185px;
   }
 
-  .btn-groupList {
-    margin-top: 0;
-    margin-right: 15px;
+  .dropdown-menuSilver > li > a {
+    padding: 8px 32px;
   }
 
-  .logo {
-    background-color: transparent;
-    margin-bottom: 0;
-    padding-bottom: 0;
-  }
+  .logo
+{
+  width: 100%;
+}
 
   /*------ Home ------*/
-  .mainContent {
-    padding-top: 0;
+  .slide-container {
+    height: 148px;
   }
 
-  .one {
-    padding-left: 10px;
+  .slideShowSideBar {
+    padding-left: 15px;
+    padding-right: 15px;
   }
 
-  .three {
-    padding-right: 10px;
+  .promoColumn {
+    margin-left: 0;
   }
 
-  .btn-link {
-    margin-left: 172px;
+  .rowFeatured {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .rowFeatured:last-child {
+    margin-bottom: 5px;
+  }
+  
+  .storeFeatureLeft {
+    margin-right: 0;
+    margin-bottom: 5px;
+  }
+
+  .storeFeatureMiddle {
+    margin: 0 0 5px;
+  }
+
+  .subFeature {
+    padding-left: 15px;
+    padding-right: 15px;
   }
 
   /*------ Weekly Ad ------*/
   .dcircular-list-single {
-    margin: 10px 10px 10px 0;
+    border: 1px solid red;
+    margin: 10px;
     min-height: 280px;
     width: 100%;
   }
@@ -1640,7 +1581,7 @@ textarea
   }
 
   .btn-groupSortBy {
-    margin-left: 14px;
+    margin-left: 18px;
   }
 
   .totalSavings {
@@ -1660,7 +1601,7 @@ textarea
 
   /*------ Coupons ------*/
   .couponsOnCard {
-    margin-left: 73px;
+    margin-left: 64px;
     margin-bottom: 10px;
   }
 
@@ -1672,9 +1613,13 @@ textarea
     margin-left: 69px;
   }
 
+  .printingStoreCouponBtns {
+    margin-top: 10px;
+  }
+
   /*------ Shopping List ------*/
   .manageOptions {
-    margin-left: 20px;
+    margin-left: 12px;
     margin-top: 10px;
   }
 
@@ -1682,7 +1627,7 @@ textarea
     padding: 0 4px;
   }
 
-  .manageListItems {
+    .manageListItems {
     margin-bottom: 10px;
   }
 
@@ -1690,17 +1635,16 @@ textarea
     margin: 3px 0;
   }
 
-  /*------ Recipe Center ------*/
+  .manageListItems input {
+    border: 1px solid #000000;
+  }
 
+  /*------ Recipe Center ------*/
   .ingredientOptions, .recipeOptions {
     text-align: center;
   }
 
-  .rOTD img {
-    margin: 10px 58px;
-  }
-
-  /*------ Static Content ------*/
+  /*------ Static COntent ------*/
   .staticTabs {
     margin: 0;
   }
@@ -1797,3 +1741,4 @@ textarea
   margin-bottom: 10px;
   margin-top: -1px;
 }
+

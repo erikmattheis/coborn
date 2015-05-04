@@ -1,23 +1,3 @@
-<script>
-
-jQuery(window).ready(function() {
-    setHeight('.make-equal-height');
-});
- 
-
-function setHeight(column) {
-    var maxHeight = 0;
-    var column = jQuery(column);
-    column.each(function() {
-        if(jQuery(this).height() > maxHeight) {
-            maxHeight = jQuery(this).height();;
-        }
-    });
-    column.height(maxHeight);
-}
-
-</script>
-
 <div class="row" data-ctrl-coupon-classic="">
     <div class="col-md-12 couponTabs noPadWidth pull-left" data-ng-init="couponType = 'printable';sortByName = 'About to Expire';">
         <ul class="nav nav-tabs" data-ng-include="getThemeUrl('/views/engine/coupons-tabs.html')"></ul>
@@ -55,7 +35,7 @@ function setHeight(column) {
                     <div data-gsn-spinner="{radius:30, width:8, length: 16}" data-show-if="selectedCoupons.items.length <= 0 && !filterBy "></div>
                     <div data-infinite-scroll="loadMore()">
                         <div class="col-md-4 col-sm-4 col-xs-12 noPadWidth" data-ng-repeat="item in selectedCoupons.items" data-bindonce="">
-                            <div class="singleCoupon make-equal-height">
+                            <div class="singleCoupon">
                                 <img data-ng-src="{{item.SmallImageUrl || getThemeUrl('/images/no_image.jpg')}}" />
                                 <div class="description">
                                     <h4>{{item.Description1}}</h4>
