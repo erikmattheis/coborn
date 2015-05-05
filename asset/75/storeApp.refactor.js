@@ -1,7 +1,7 @@
 ﻿/* bi     g traffic on home, coupons, circular and store locator */
 
 var storeApp = angular
-    .module('storeApp', ['oc.lazyLoad', 'infinite-scroll', 'ngRoute', 'ngSanitize', 'ngAnimate', 'ngTouch', 'chieffancypants.loadingBar', 'gsn.core', 'vcRecaptcha', 'ui.bootstrap', 'ui.map', 'ui.keypress', 'ui.event', 'ui.utils', 'facebook', 'angulartics', 'angulartics.gsn.ga'])
+    .module('storeApp', ['oc.lazyLoad', 'ngRoute', 'ngSanitize', 'ngAnimate', 'ngTouch', 'chieffancypants.loadingBar', 'gsn.core', 'vcRecaptcha', 'ui.bootstrap', 'ui.map', 'ui.keypress', 'ui.event', 'ui.utils', 'facebook', 'angulartics', 'angulartics.gsn.ga'])
     .config(['$ocLazyLoadProvider', '$routeProvider', '$locationProvider', '$sceDelegateProvider', '$sceProvider', '$httpProvider', 'FacebookProvider', '$analyticsProvider', function ($ocLazyLoadProvider, $routeProvider, $locationProvider, $sceDelegateProvider, $sceProvider, $httpProvider, FacebookProvider, $analyticsProvider) {
 
       gsn.applyConfig(window.globalConfig.data || {});
@@ -131,7 +131,8 @@ var storeApp = angular
               return $ocLazyLoad.load({
                 files: [
                     '/src/directives/ctrlCouponClassic.js',
-                    '/src/directives/gsnAdUnit.js'
+                    '/src/directives/gsnAdUnit.js',
+                    '/src/services/gsnProLogicRewardCard.js'
                 ]
               });
             }]
