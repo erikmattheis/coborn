@@ -74,7 +74,8 @@ var storeApp = angular
                   '/vendor/jquery.digitalcirc.js',
                   '/src/directives/ctrlCircular.js',
                   '/src/directives/gsnAdUnit.js',
-                  '/src/directives/gsnDigitalCirc.js'
+                  '/src/directives/gsnDigitalCirc.js',
+                  '//cdnjs.cloudflare.com/ajax/libs/qtip2/2.2.0/jquery.qtip.min.css'
                 ]
               });
             }]
@@ -95,7 +96,8 @@ var storeApp = angular
                   '/vendor/jquery.digitalcirc.js',
                   '/src/directives/ctrlCircular.js',
                   '/src/directives/gsnAdUnit.js',
-                  '/src/directives/gsnPopover.js'
+                  '/src/directives/gsnPopover.js',
+                  '//cdnjs.cloudflare.com/ajax/libs/qtip2/2.2.0/jquery.qtip.min.css'
                 ]
               });
             }]
