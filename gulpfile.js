@@ -127,7 +127,6 @@ gulp.task('build-core', function() {
     "./src/services/gsnProfile.js",
     "./src/services/gsnStorage.js",
     "./src/services/gsnStore.js",
-    "./src/services/gsnYoutech.js",
     "./src/services/gsnYoutech.js"])
   .pipe(concat('gsncore.refactor.js'))
   .pipe(gulp.dest('./src/'));

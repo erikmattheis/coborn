@@ -69,9 +69,10 @@ var storeApp = angular
             lazy: ['$ocLazyLoad', function($ocLazyLoad) {
               return $ocLazyLoad.load({
                 files: [
-                    '/src/directives/ctrlCircular.js',
-                    '/src/directives/gsnAdUnit.js',
-                    '/src/directives/gsnDigitalCirc.js'
+                  '/vendor/jquery.digitalcirc.js',
+                  '/src/directives/ctrlCircular.js',
+                  '/src/directives/gsnAdUnit.js',
+                  '/src/directives/gsnDigitalCirc.js'
                 ]
               });
             }]
@@ -87,9 +88,10 @@ var storeApp = angular
             lazy: ['$ocLazyLoad', function($ocLazyLoad) {
               return $ocLazyLoad.load({
                 files: [
-                    '/src/directives/ctrlCircular.js',
-                    '/src/directives/gsnAdUnit.js',
-                    '/src/directives/gsnPopover.js'
+                  '/vendor/jquery.digitalcirc.js',
+                  '/src/directives/ctrlCircular.js',
+                  '/src/directives/gsnAdUnit.js',
+                  '/src/directives/gsnPopover.js'
                 ]
               });
             }]
