@@ -68,7 +68,9 @@ var storeApp = angular
           resolve: {
             lazy: ['$ocLazyLoad', function($ocLazyLoad) {
               return $ocLazyLoad.load({
+                serie: true,
                 files: [
+                  '//cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.3.0/handlebars.min.js',
                   '/vendor/jquery.digitalcirc.js',
                   '/src/directives/ctrlCircular.js',
                   '/src/directives/gsnAdUnit.js',
@@ -87,7 +89,9 @@ var storeApp = angular
           resolve: {
             lazy: ['$ocLazyLoad', function($ocLazyLoad) {
               return $ocLazyLoad.load({
+                serie: true,
                 files: [
+                  '//cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.3.0/handlebars.min.js',
                   '/vendor/jquery.digitalcirc.js',
                   '/src/directives/ctrlCircular.js',
                   '/src/directives/gsnAdUnit.js',
