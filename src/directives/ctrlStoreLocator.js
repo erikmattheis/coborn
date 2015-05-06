@@ -21,9 +21,9 @@
 
   function myController($scope, gsnApi, $notification, $timeout, $rootScope, $location, gsnStore) {
 
+
     $scope.activate = activate;
 
-    
     var geocoder = new google.maps.Geocoder();
     var defaultZoom = $scope.defaultZoom || 10;
 

@@ -8,7 +8,6 @@ var storeApp = angular
       gsn.config.ContentBaseUrl = window.location.port > 1000 ? "/asset/75" : gsn.config.ContentBaseUrl;
       gsn.initAngular($sceProvider, $sceDelegateProvider, $locationProvider, $httpProvider, FacebookProvider, $analyticsProvider);
 
-
       // setting up home file
       var homeFile = gsn.getContentUrl('/views/home.html');
       if (gsn.config.HomePage.ConfigData) {
@@ -19,7 +18,8 @@ var storeApp = angular
       }
 
       $ocLazyLoadProvider.config({
-        debug: true
+        debug: false,
+        events: false
       });
 
       // storeRequired attribute identify route require a store selection
@@ -503,9 +503,10 @@ var storeApp = angular
           resolve: {
             lazy: ['$ocLazyLoad', function($ocLazyLoad) {
               return $ocLazyLoad.load({
-                files: [
-                    '/vendor/ui-map.min.js',
-                    '/src/directives/ctrlStoreLocator.js'
+                serie: true,
+                files: ['/vendor/ui-map.min.js',
+                '/src/directives/ctrlStoreLocator.js'
+                /*'js!//maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry' */
                 ]
               });
             }]
