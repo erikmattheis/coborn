@@ -135,12 +135,3 @@ gulp.task('build-core', function() {
 gulp.task('watch', function() {
     gulp.watch('src/**/*.js', ['build-core']);
 });
-
-var ngGraph = require('gulp-angular-architecture-graph');
- 
-gulp.task('dep-graph', function(){
-    gulp.src('src/**/*.js')
-        .pipe(ngGraph({
-            dest: 'architecture'
-        }));
-});
